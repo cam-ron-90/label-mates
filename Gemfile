@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
+gem "discogs-wrapper"
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
