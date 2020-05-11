@@ -2,11 +2,11 @@ class PagesController < ApplicationController
   require 'discogs'
 
   before_action do
-    @discogs = Discogs::Wrapper.new("Label Mates", session[:access_token])
+    @discogs = Discogs::Wrapper.new("Label Mates", user_token: "zQTIHZUhvDLiAOGaLjQZDaDLYdfEEYmGchCgkRmu")
   end
 
-  before_action :authenticate
-  before_action :callback
+  # before_action :authenticate
+  # before_action :callback
 
   skip_before_action :authenticate_user!
 
@@ -21,7 +21,7 @@ class PagesController < ApplicationController
     app_key      = ENV["DISCOGS_API_KEY"]
     app_secret   = ENV["DISCOGS_API_SECRET"]
     request_data = @discogs.get_request_token(app_key, app_secret,
-                     "http://127.0.0.1:3000/callback")
+                     "http://127.0.0.1:3000/pages/callback")
 
     session[:request_token] = request_data[:request_token]
 
@@ -40,6 +40,9 @@ class PagesController < ApplicationController
   end
 
   def artist_search
+    if params[:query]
+      @search = @discogs.search("#{params[:query]}", :per_page => 2, :type => :label)
+    end
   end
 
   def label_search
