@@ -1,17 +1,17 @@
- <%= simple_form_for :search, url: label_search_pages_path, method: :get do |f| %>
-        <div class="search-form-control form-group">
-          <div class="search-form-inline">
-            <label>Invite Artists Labels</label>
+ <div class="container">
+  <%= simple_form_for :search, url: label_search_pages_path, method: :get do |f| %>
+    <div class="search-form-control form-group">
+      <div class="search-form-inline">
+        <label>Search Artists Labels</label>
+        <input class="form-control search-input" type="text" name="query" id="query" placeholder="Jeru Tha Damaja" />
+        <button name="button" type="submit" class="btn btn-flat">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  <% end %>
 
-            <input class="form-control search-input" type="text" name="query" id="query" placeholder="Bob" />
-            <button name="button" type="submit" class="btn btn-flat">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </div>
-      <% end %>
-
-<% if @search %>
+  <% if @search %>
     <% @search.results.each do |result| %>
       <% labels = [] %>
       <% artist = @discogs.get_artist(result.id) %>
@@ -30,3 +30,4 @@
       </ol>
     <% end %>
   <% end %>
+ </div>

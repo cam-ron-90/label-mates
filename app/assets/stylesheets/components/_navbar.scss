@@ -1,6 +1,13 @@
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: gray;
+  h1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 4em;
+    margin: 0 auto;
+    line-height: .9;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {

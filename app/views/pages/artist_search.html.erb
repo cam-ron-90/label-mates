@@ -1,16 +1,15 @@
- <%= simple_form_for :search, url: artist_search_pages_path, method: :get do |f| %>
-        <div class="search-form-control form-group">
-          <div class="search-form-inline">
-            <label>Search Labels Artists</label>
-
-            <input class="form-control search-input" type="text" name="query" id="query" placeholder="Bob" />
-            <button name="button" type="submit" class="btn btn-flat">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </div>
-      <% end %>
-
+<div class="container">
+  <%= simple_form_for :search, url: artist_search_pages_path, method: :get do |f| %>
+    <div class="search-form-control form-group">
+      <div class="search-form-inline">
+        <label>Search Labels Artists</label>
+        <input class="form-control search-input" type="text" name="query" id="query" placeholder="Loud Records" />
+        <button name="button" type="submit" class="btn btn-flat">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  <% end %>
 
   <% if @search %>
     <% @search.results.each do |result| %>
@@ -25,6 +24,7 @@
         <% end %>
       </ol>
     <% end %>
-
   <% end %>
+</div>
+
 
