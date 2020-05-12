@@ -1,12 +1,13 @@
 
 .navbar-lewagon {
   justify-content: space-between;
-  background: gray;
+  background: pink;
   h1 {
     font-family: 'Kanit', sans-serif;
-    font-size: 4em;
+    font-size: 3em;
     margin: 0 auto;
     line-height: .9;
+    color: lightpink;
   }
 }
 
@@ -15,5 +16,5 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 100px;
 }
