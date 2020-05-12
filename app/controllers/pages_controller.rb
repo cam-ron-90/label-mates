@@ -46,6 +46,9 @@ class PagesController < ApplicationController
   end
 
   def label_search
+    if params[:query]
+      @search = @discogs.search("#{params[:query]}", :per_page => 1, :type => :artist)
+    end
   end
 
   private

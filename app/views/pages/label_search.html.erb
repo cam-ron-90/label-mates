@@ -1,7 +1,7 @@
  <%= simple_form_for :search, url: label_search_pages_path, method: :get do |f| %>
         <div class="search-form-control form-group">
           <div class="search-form-inline">
-            <label>Invite your mates</label>
+            <label>Invite Artists Labels</label>
 
             <input class="form-control search-input" type="text" name="query" id="query" placeholder="Bob" />
             <button name="button" type="submit" class="btn btn-flat">
@@ -10,3 +10,23 @@
           </div>
         </div>
       <% end %>
+
+<% if @search %>
+    <% @search.results.each do |result| %>
+      <% labels = [] %>
+      <% artist = @discogs.get_artist(result.id) %>
+      <h1><%= artist.name %></h1>
+      <% artist_releases = @discogs.get_artist_releases(result.id) %>
+      <% artist_releases.releases.each do |r| %>
+        <% labels << r.label %>
+        <%# release = @discogs.get_release(r.main_release) %>
+        <%# release.labels.each {|label| labels << label.name} %>
+      <% end %>
+      <ol>
+        <% labels.uniq.each do |label| %>
+        <% next if label == nil %>
+          <li><%= label %></li>
+        <% end %>
+      </ol>
+    <% end %>
+  <% end %>
