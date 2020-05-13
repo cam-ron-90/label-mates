@@ -1,9 +1,15 @@
-
+// .navbar {
+//   margin-
+// }
 .navbar-lewagon {
   justify-content: space-between;
   background: pink;
+  border-bottom: solid 1.5px lightpink;
+  margin-bottom: 40px;
   h1 {
     font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    font-weight: 900;
     font-size: 3em;
     margin: 0 auto;
     line-height: .9;

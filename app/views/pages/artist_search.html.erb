@@ -1,30 +1,33 @@
 <div class="container">
-  <%= simple_form_for :search, url: artist_search_pages_path, method: :get do |f| %>
-    <div class="search-form-control form-group">
-      <div class="search-form-inline">
-        <label>Search Labels Artists</label>
-        <input class="form-control search-input" type="text" name="query" id="query" placeholder="Loud Records" />
-        <button name="button" type="submit" class="btn btn-flat">
-          <i class="fas fa-search"></i>
-        </button>
+  <div class="card">
+    <%= simple_form_for :search, url: artist_search_pages_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+        <div class="search-form-inline">
+          <label>Search Labels Artists</label>
+          <input class="form-control search-input" type="text" name="query" id="query" placeholder="eg. Loud Records" />
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
       </div>
-    </div>
-  <% end %>
-
-  <% if @search %>
-    <% @search.results.each do |result| %>
-      <% artists = [] %>
-      <% label = @discogs.get_label(result.id) %>
-      <h1><%= label.name %></h1>
-      <% label_releases = @discogs.raw(label.releases_url) %>
-      <% label_releases.releases.each {|a| artists << a.artist} %>
-      <ol>
-        <% artists.uniq.each do |artist| %>
-          <li><%= artist %></li>
-        <% end %>
-      </ol>
     <% end %>
-  <% end %>
+
+    <% if @search %>
+      <% @search.results.each do |result| %>
+        <% artists = [] %>
+        <% label = @discogs.get_label(result.id) %>
+        <h1><%= label.name %></h1>
+        <% label_releases = @discogs.raw(label.releases_url) %>
+        <% label_releases.releases.each {|a| artists << a.artist} %>
+        <ol>
+          <% artists.uniq.sort.each do |artist| %>
+            <li><%= artist %></li>
+          <% end %>
+        </ol>
+      <% end %>
+    <% end %>
+  </div>
+
 </div>
 
 

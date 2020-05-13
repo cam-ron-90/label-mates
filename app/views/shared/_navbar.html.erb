@@ -9,16 +9,19 @@
     </button>
 
 
-    <h1>LABEL MATES</h1>
+    <h1 class="navbar-heading">LABEL MATES</h1>
 
 
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
+          <!-- <li class="nav-item active"> -->
+            <div class="home-btn">
+              <%= link_to "Home", root_path %>
+            </div>
+
+          <!-- </li> -->
           <!-- <li class="nav-item">
             <%#= link_to "Messages", "#", class: "nav-link" %>
           </li> -->

@@ -11,3 +11,28 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// .background img {
+//   // background-image: url('mixing-board.jpg');
+//   opacity: 0.2;
+//   object-fit: cover;
+//   height: 100%;
+//   width: 100vw;
+//   position: absolute;
+//   background-size: cover;
+//   background-position: center;
+// }
+
+body::after {
+  content: "";
+  background: url("mixing-board.jpg");
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}

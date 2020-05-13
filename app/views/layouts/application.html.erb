@@ -8,12 +8,18 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;1,100;1,200;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
+
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <!-- <div class="background"> -->
+      <%#= image_tag("mixing-board.jpg") %>
+      <%= yield %>
+    <!-- </div> -->
+
+
 
     <%= javascript_pack_tag 'application' %>
   </body>
