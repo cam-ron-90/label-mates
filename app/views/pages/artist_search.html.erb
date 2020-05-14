@@ -17,7 +17,7 @@
       <% @search.results.each do |result| %>
         <% artists = [] %>
         <% label = @discogs.get_label(result.id) %>
-        <h2><%= label.name %></h2>
+        <h2 class="results-heading"><%= label.name %></h2>
         <% label_releases = @discogs.raw(label.releases_url) %>
         <% label_releases.releases.each {|a| artists << a.artist} %>
         <ol>
