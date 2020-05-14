@@ -74,5 +74,63 @@
   }
 }
 
+.search-type-btn {
+  transform: skew(-4deg, -4deg) rotate(4deg);
+  transform-origin: center center;
+  margin-top: 40px;
+  a {
+    text-align: center;
+    background-color: #32363a;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 2.5rem;
+    min-width: 7.5rem;
+    width: auto !important;
+    padding: 2px 16px;
+    // padding-right: 16px;
+    cursor: pointer;
+    // transform: skew(-5deg, -5deg) rotate(5deg);
+    // transform-origin: center center;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+      color: white;
+      text-decoration: none !important;
+    }
+  }
+}
+
+.change-search-btn {
+  transform: skew(-4deg, -4deg) rotate(4deg);
+  transform-origin: center center;
+  // width: 400px;
+  margin: 0 auto;
+  margin-top: -20px;
+  margin-bottom: 40px;
+  a {
+    text-align: center;
+    background-color: lightpink;
+    border: 2px solid #e0a5ae;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 24px;
+    min-width: 7.5rem;
+    width: auto !important;
+    padding: 2px 16px;
+    // padding-right: 16px;
+    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+      color: white;
+      text-decoration: none !important;
+    }
+  }
+}
+
 
 
