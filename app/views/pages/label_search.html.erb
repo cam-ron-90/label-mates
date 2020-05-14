@@ -17,7 +17,7 @@
       <% @search.results.each do |result| %>
         <% labels = [] %>
         <% artist = @discogs.get_artist(result.id) %>
-        <h1><%= artist.name %></h1>
+        <h2><%= artist.name %></h2>
         <% artist_releases = @discogs.get_artist_releases(result.id) %>
         <% artist_releases.releases.each do |r| %>
           <% labels << r.label if r.label != nil %>

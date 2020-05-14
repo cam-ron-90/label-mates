@@ -1,8 +1,8 @@
- <% if @discogs.authenticated? %>
-  <ul>
-    <li><a href="/pages/artist_search">Search Artist by Label</a></li>
-    <li><a href="/pages/label_search">Search Label by Artist</a></li>
-  </ul>
+<% if @discogs.authenticated? %>
+
+    <h1 class="home-heading"><a href="/pages/artist_search">Search Artists by Label</a></h1>
+    <h1 class="home-heading"><a href="/pages/label_search">Search Labels by Artist</a></h1>
+
 <% else %>
   <p> Authenticate Discogs.com account</p>
 <% end %>
