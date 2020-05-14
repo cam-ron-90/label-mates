@@ -113,7 +113,7 @@
     text-align: center;
     background-color: lightpink;
     border: 2px solid #e0a5ae;
-    color: white;
+    color: #32363a;
     font-family: 'Kanit', sans-serif;
     font-weight: 100;
     font-style: italic;
@@ -125,10 +125,16 @@
     cursor: pointer;
     &:hover {
       cursor: pointer;
-      opacity: 0.9;
-      color: white;
+      opacity: 0.8;
+      color: #32363a;
       text-decoration: none !important;
     }
+  }
+}
+
+@media(max-width: 360px) {
+  .change-search-btn a {
+    font-size: 20px;
   }
 }
 
