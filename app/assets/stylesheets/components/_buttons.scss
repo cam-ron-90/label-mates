@@ -23,12 +23,54 @@
       text-decoration: none !important;
     }
   }
-
 }
-// .home-btn:hover {
-//   cursor: pointer;
-//   opacity: 0.9;
-//   color: white;
-// }
+
+.search-btn {
+  // transform: skew(-4deg, -4deg) rotate(4deg);
+  // transform-origin: center center;
+    text-align: center;
+    align-items: center;
+    background-color: #32363a !important;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    padding: 2px 16px;
+    border: unset;
+    font-size: 16px;
+    outline: none;
+  // a {
+  //   text-align: center;
+  //   background-color: #32363a !important;
+  //   color: white;
+  //   font-family: 'Kanit', sans-serif;
+  //   font-weight: 100;
+  //   font-style: italic;
+  //   font-size: 16px;
+  //   min-width: 7.5rem;
+  //   width: auto !important;
+  //   padding: 2px 16px;
+  //   // padding-right: 16px;
+  //   cursor: pointer;
+  //   // transform: skew(-5deg, -5deg) rotate(5deg);
+  //   // transform-origin: center center;
+  //   &:hover {
+  //     cursor: pointer;
+  //     opacity: 0.9;
+  //     color: white;
+  //     text-decoration: none !important;
+  //   }
+  // }
+  &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+      color: white;
+      text-decoration: none !important;
+    }
+  &:focus {
+    outline: none;
+  }
+}
+
 
 
