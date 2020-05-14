@@ -1,6 +1,18 @@
 .search-form-inline {
   display: flex;
   // justify-content: space-between;
+  input {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 100;
+    outline: none;
+    border-radius: 0px;
+  }
 }
 
+.search-form-control .form-control:focus {
+  // border: 1px solid $yellow;
+  border-color: pink;
+  outline: none !important;
+  box-shadow: 0 2px 3px rgba(255,192,203,0.5);
+}
 
