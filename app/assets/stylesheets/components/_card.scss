@@ -18,6 +18,22 @@
   left: -7.5px;
 }
 
+.card ol {
+  list-style: none;
+}
+
+.card li:before {
+   content: '';
+   display: inline-block;
+   height: 12px;
+   width: 12px;
+   background-image: url('pink-record.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin-right: 10px;
+   opacity: 0.7;
+}
+
 
   // &:after {
   //   content: '';
