@@ -139,4 +139,22 @@
 }
 
 
+@media(max-width: 575px) {
+  .search-type-btn a {
+    font-size: 2rem;
+  }
+}
+
+@media(max-width: 480px) {
+  .search-type-btn a {
+    font-size: 1.5rem;
+  }
+}
+
+@media(max-width: 360px) {
+  .search-type-btn a {
+    font-size: 1.3rem;
+  }
+}
+
 
