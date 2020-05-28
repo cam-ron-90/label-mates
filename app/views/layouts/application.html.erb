@@ -17,9 +17,12 @@
     <%= render 'shared/flashes' %>
     <!-- <div class="background"> -->
       <%#= image_tag("mixing-board.jpg") %>
+    <div class="page-content">
       <%= yield %>
-    <!-- </div> -->
+    </div>
 
+    <!-- </div> -->
+    <%= render 'shared/footer' %>
 
 
     <%= javascript_pack_tag 'application' %>
